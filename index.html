@@ -1,1 +1,20 @@
-Hello, World!
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    const url = "https://public.api.nexon.com/openapi/maplestory/v1/cube-use-results";
+    const count = 1000;
+    const date = '2023-07-28';
+    const cursor = '100';
+
+    axios.get(url, {
+        count: count,
+        date: date,
+        cursor: cursor
+    })
+    .then(function(response) {
+        console.log(response);
+    }).catch(function(error) {
+        console.log(error);
+    }).then(function() {
+        
+    })
+</script>
